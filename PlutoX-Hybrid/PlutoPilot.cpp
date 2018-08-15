@@ -118,12 +118,12 @@ void plutoPilot()
 			}
 
 
-			Throttle_Value = Control.getRC(RC_THROTTLE);
+			Throttle_value = Control.getRC(RC_THROTTLE);
 
 
-			M3_Value =  (Throttle_Value-1500)*2-(Roll_value-1500)/2;
+			M3_Value =  (Throttle_value-1500)*2-(Roll_value-1500)/2;
 			M3_Value =  constrain(M3_Value, -500, 500);
-			M2_Value =  (Throttle_Value-1500)*2+(Roll_value-1500)/2;
+			M2_Value =  (Throttle_value-1500)*2+(Roll_value-1500)/2;
 			M2_Value =  constrain(M2_Value, -500, 500);
 
 			if(M2_Value<0)
